@@ -1,49 +1,48 @@
+// requirements 
 var express = require("express");
+var friendArray = require('../data/friends.js');
 
+// Create express router
 var router = express.Router();
 
-// Import the friends.js data
-var friends = require('../data/friends.js');
 
-
-// Export API routes
+// Export API routes to use in other parts of the code
 module.exports = function(router) {
 
-	// GET route to pull in the full "friends" array of objects as JSON objects
+	// GET route to pull in the full "friendArray" array of objects as JSON objects
 	router.get('/api/friends', function(req, res) {
-		res.json(friends);
+		res.json(friendArray);
 	});
 
-	// Add new user to "friends" array
+	// POST route to add userInput to the "friendArray" array and parse out the scores for finding the difference
 	router.post('/api/friends', function(req, res) {
-		// Capture the user input object
 		var userInput = req.body;
 		var userResponses = userInput.scores;
-		var friendName = "";
-        var friendImage = "";
-		var totalDifference = 100; 
-        // compare user's answers to others in the "friends" array and return the closest match
-        for (var i = 0; i < friends.length; i++) {
-            // console.log('friend = ' + JSON.stringify(friends[i]));
-
-            // Compute differenes for each question
-            var diff = 0;
-            for (var j = 0; j < userResponses.length; j++) {
-                diff += Math.abs(friends[i].scores[j] - userResponses[j]);
+        var userName = userInput.name;
+        var userPhoto = userInput.photo;
+        var totalDifference = 0; 
+        
+        // compare user's answers to others in the "friendArray" array and return the closest match
+        for (var i = 0; i < friendArray.length; i++) {
+            // Set "answerDiff" to a numeric value for later use
+            var answerDiff = 0;
+            // For loop to find the differences in responses between user and existing members in the "friendArray"
+            for (var k = 0; k < userResponses.length; k++) {
+                answerDiff += (Math.abs(parseInt(friendArray[i].scores[k]) - parseInt(userResponses[k])));
             }
 
             // If lowest difference, record the friend match
-            if (diff < totalDifference) {
-                totalDifference = diff;
-                friendName = friends[i].name;
-                friendImage = friends[i].photo;
+            if (answerDiff < totalDifference) {
+                totalDifference = answerDiff;
+                friendName = friendArray[i].name;
+                friendImage = friendArray[i].photo;
             }
-        }
+        };
 
-    // Add new user
-    friends.push(userInput);
+        // Add new user's responses to the "friendArray" array
+        friendArray.push(userInput);
 
-    // Send appropriate response
-    res.json({status: 'OK', matchName: friendName, matchImage: friendImage});
+        // Send JSON response of the new friend match
+        res.json({status: 'OK', friendName: friendName, friendImage: friendImage});
     });
 };
