@@ -39,6 +39,11 @@ module.exports = function(router) {
             }
         };
 
+        $(".submit").on("click", function() {
+            router.get();
+            router.post();
+        })
+        
         // Add new user's responses to the "friendArray" array
         friendArray.push(userInput);
 
