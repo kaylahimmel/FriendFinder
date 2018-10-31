@@ -10,6 +10,6 @@ router.get("/survey", function(req, res) {
 
 
 // set default catch-all "landing" page as home.html
-router.get('/', function(req, res) {
+router.use( function(req, res) {
     res.sendFile(path.join(__dirname, '../public/home.html'));
 });

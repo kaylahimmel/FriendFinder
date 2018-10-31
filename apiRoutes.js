@@ -5,7 +5,6 @@ var friendArray = require('../data/friends.js');
 // Create express router
 var router = express.Router();
 
-
 // Export API routes to use in other parts of the code
 module.exports = function(router) {
 
@@ -39,11 +38,6 @@ module.exports = function(router) {
             }
         };
 
-        $(".submit").on("click", function() {
-            router.get();
-            router.post();
-        })
-        
         // Add new user's responses to the "friendArray" array
         friendArray.push(userInput);
 

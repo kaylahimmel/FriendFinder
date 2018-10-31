@@ -4,6 +4,9 @@ var express = require("express");
 var api = require("./apiRoutes")
 var html = require("./htmlRoutes")
 
+require("./app/routing/apiRoutes.js")(router);
+require("./app/routing/htmlRoutes.js")(router);
+
 var router = express();
 
 var port = 8889;
@@ -30,7 +33,6 @@ router.get("/:page", function(req, res) {
 // function that takes the user's inputs and posts them to one of our arrays in the table.js file
 router.post("/", function(req, res) {
     res.end(req.body)
-   // console.log(req)
 });
 
 // message to alert the user of the port that is being used and the server is on and "listening"
