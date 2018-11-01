@@ -2,8 +2,8 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     text-align: center;
-    color: navy;
-    background-color: honeydew;
+    color: #005792;
+    background-color: #FFEBBB;
     line-height: 1.25em;
 }
 
@@ -13,47 +13,65 @@ h1 {
     font-size: 80px;
 }
 
+hr {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-style: solid;
+    border-width: 4px;
+}
+
 form {
-    margin: 10px 50px;
-    padding: 10px 50px;
+    padding: 10px 40px;
+    margin: 0px 40px;
 }
 
 label {
-    padding: 50px 10px 5px 10px;
+    padding: 60px 10px 5px 10px;
     font-family: 'Lato', sans-serif;
-    color: navy;
+    color: #005792;
     font-size: 25px;
+    line-height: 1.25em;
 }
 
 option {
     font-family: 'Lato', sans-serif;
-    color: navy;
+    color: #005792;
     font-size: 25px;
 }
 
 button {
-    margin: 20px 10px;
+    margin: 40px 0px;
     padding: 10px 20px;
-    color: honeydew;
-    background-color: navy;
+    color: #005792;
+    background-color: #F4AEBA;
 }
 
 a:hover,
 a:active,
 a:visited {
-    color: navy;
+    color: #005792;
+    padding-bottom: 100px;
+}
+
+footer {
+    background-color: #005792;
+    position: sticky;
+    height: 26px;
+    margin: 0px 0px -1px 0px;
 }
 
 .jumbotron {
-    padding: 10px 10px;
-    color: navy;
-    background-color: honeydew;
+    position: static;
+    padding: 40px 40px 30px;
+    margin: -1px 0px 0px 0px;
+    color: #005792;
+    background-color: #A0DBDB;
 }
 
-.credit {
-    font-size: 18px;
-}
-
+.credit,
 .how-to {
     font-size: 18px;
+    line-height: .75em;
 }
+
