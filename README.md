@@ -1,6 +1,6 @@
-# FriendMagnet
+# Frnd Fndr
 
-Welcome to FriendMagnet, a friend-finding app that matches you with a highly-compatible friend based off 10 personality test questions. Get started by clicking the 'Take the Quiz' button. 
+Welcome to Frnd Fndr, a friend-matching that pairs you with a highly-compatible new friend based off 10 personality test questions. Get started by clicking the 'Take the Quiz' button. 
 
 
 
