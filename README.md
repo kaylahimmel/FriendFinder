@@ -1,6 +1,6 @@
 # Frnd Fndr
 
-Welcome to Frnd Fndr, a friend-matching that pairs you with a highly-compatible new friend based off 10 personality test questions. Get started by clicking the 'Take the Quiz' button. 
+Welcome to Frnd Fndr, a friend-matching that pairs you with a highly-compatible new friend based off 10 personality test questions from 16Personalities NERIS Type Explorer. Get started by clicking the 'Take the Quiz' button. 
 
 
 
