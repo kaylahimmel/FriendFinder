@@ -5,6 +5,7 @@ body {
     color: #005792;
     background-color: #FFEBBB;
     line-height: 1.25em;
+    margin: 50px 50px;
 }
 
 h1 {
@@ -75,3 +76,6 @@ footer {
     line-height: .75em;
 }
 
+.form-control {
+    padding: 20px 0px 5px 0px;
+}
