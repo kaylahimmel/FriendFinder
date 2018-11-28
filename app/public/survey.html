@@ -9,10 +9,7 @@
     
     <!--Boostrap and jQuery-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--Chosen CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
     <!--Google fonts, Font Awesome, and my own CSS-->
     <link href="https://fonts.googleapis.com/css?family=Passion+One:700|Lato:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -142,36 +139,48 @@
                 <option value="5">5 - I strongly agree</option>
             </select>
 
-            <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Find My New Friend</button>
         </form>
+        <button type="button" id="submit" class="btn btn-primary btn-lg btn-block">Find My New Friend</button>
+
     </div>
     <footer></footer>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
     <script type="text/javascript">
-        $(".submit").on("click", function() {
+        $("#submit").on("click", function(event) {
             event.preventDefault();
-            $(".quiz").empty();
-            $(".quiz").hide();
-            runApp();
+            // $(".quiz").empty();
+            // $(".quiz").hide();
+
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#image").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            $.post("/api/friends", userData, function(data) {
+                console.log(data)
+            })
+            // runApp(userData);
         });
 
-        function runApp() {
-            var currentURL = window.location.origin;
+        // function runApp(newUser) {
+        //     $.post("/api/friends", newUser, function(data) {
+        //         console.log(data.name)
+        //     })                 
+        // };
 
-            $.ajax({url: currentURL + "/api/friends", method: "GET"})
-                .done(function(friendArray) {
-                    console.log("---------------------------------");
-                    console.log("URL: " + currentURL + "api/friends");
-                    console.log("---------------------------------");
-                    console.log(friendArray);
-                    console.log("---------------------------------");
-
-                    for (var i = 0; i < friendArray.length; i++) {
-                        console.log(friendArray[i]);
-                    }
-                })
-        };
     </script>
-
+</body>
 </html>

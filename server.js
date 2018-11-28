@@ -21,12 +21,14 @@ var express = require("express");
 var app = express();
 var path = require("path");
 var PORT = process.env.PORT || 8080;
-var routes = require("./app/routing/htmlRoutes.js")
+var htmlRoutes = require("./app/routing/htmlRoutes")
+var apiRoutes = require("./app/routing/apiRoutes")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(routes);
+app.use(htmlRoutes);
+app.use(apiRoutes);
 
 // require("./app/routing/apiRoutes.js")(app);
 // require("./app/routing/htmlRoutes.js")(app);
