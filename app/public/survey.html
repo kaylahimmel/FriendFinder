@@ -7,12 +7,11 @@
     
     <title>Frnd Fndr: Survey</title>
     
-    <!--Boostrap and jQuery-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!--Google fonts, Font Awesome, and my own CSS-->
+    <!--Boostrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Passion+One:700|Lato:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!--My own CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -29,6 +28,8 @@
             <p class="how-to">Then, answer each question on a scale of 1 to 5 where 1 = strongly disagree and 5 = strongly agree.</p>
         </div>
     </header>
+
+    <div id="newFriend"></div>
 
     <div class="form-group">
         <form class="quiz">
@@ -143,44 +144,67 @@
         <button type="button" id="submit" class="btn btn-primary btn-lg btn-block">Find My New Friend</button>
 
     </div>
+
+    <!-- Large modal -->
+    <div id="resultsModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <h5>Your Friend Match:</h5>
+            <img id="matchPhoto">
+            <h3 id="matchName"></h3>
+        </div>
+    </div>
+    </div>
+
     <footer></footer>
+    <!--jQuery & Bootstrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--My own JS-->
+    <!-- <script type="text/javascript" src="./assets/javascript/survey.js"></script> -->
+    
     <script type="text/javascript">
-        $("#submit").on("click", function(event) {
-            event.preventDefault();
-            // $(".quiz").empty();
-            // $(".quiz").hide();
-
-            var userData = {
-                name: $("#name").val(),
-                photo: $("#image").val(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
-            $.post("/api/friends", userData, function(data) {
-                console.log(data)
-            })
-            // runApp(userData);
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+    
+        var userData = {
+            name: $("#name").val(),
+            photo: $("#image").val(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
+        };
+        
+        $.post("/api/friends", userData, function(data) {  // ERRORING OUT ON THIS LINE
+            $("#matchPhoto").attr("src", data.friendImage);
+            $("#matchName").text(data.friendName);
+            $("#resultsModal").modal('toggle');
         });
-
-        // function runApp(newUser) {
-        //     $.post("/api/friends", newUser, function(data) {
-        //         console.log(data.name)
-        //     })                 
-        // };
-
+        
+        // runApp(userData);
+        // $(".quiz").empty();
+        // $(".quiz").hide();
+    });
+    
+    console.log("test")
+    
+    // function runApp(newUser) {
+    //     $.post("/api/friends", newUser, function(data) {
+    //         console.log(data.name)
+    //     })                 
+    // };
     </script>
+
 </body>
+
 </html>

@@ -27,6 +27,8 @@ var apiRoutes = require("./app/routing/apiRoutes")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static('app/public'))
+
 app.use(htmlRoutes);
 app.use(apiRoutes);
 
