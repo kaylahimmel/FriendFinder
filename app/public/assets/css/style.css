@@ -2,29 +2,33 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     text-align: center;
-    color: #005792;
-    background-color: #FFEBBB;
-    line-height: 1.25em;
+    color: #ffa700;
+    background-color: #ffffff;
+    line-height: 1.4em;
 }
 
 h1 {
     font-family: 'Passion One', cursive;
     letter-spacing: 0.2rem; 
-    font-size: 80px;
+    font-size: 85px;
+}
+
+h3 {
+    font-size: 50px;
+    color: #9a4e00;
 }
 
 h5 {
-    font-family: 'Passion One', cursive;
-    letter-spacing: 0.2rem; 
-    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    color: #9a4e00;
 }
 
 hr {
-    display: block;
     margin-top: 2em;
     margin-bottom: 2em;
     border-style: solid;
-    border-width: 4px;
+    border-width: 2px;
 }
 
 form {
@@ -33,63 +37,101 @@ form {
 }
 
 label {
-    padding: 60px 10px 5px 10px;
+    margin: 10px 0px;
+    padding: 25px 10px 5px 10px;
     font-family: 'Lato', sans-serif;
-    color: #005792;
-    font-size: 25px;
+    color: #9a4e00;
+    font-size: 22px;
     line-height: 1.25em;
 }
 
-option {
+option,
+select,{
     font-family: 'Lato', sans-serif;
-    color: #005792;
-    font-size: 25px;
+    background-color: #ffffff;
+    border-color: #9a4e00;
+    color: #9a4e00;
+    font-size: 18px;
+    margin-bottom: 60px;
 }
 
 button {
-    margin: 40px 40px;
+    margin: 40px 0px 150px 0px;
     padding: 10px 20px;
-    color: #005792;
-    background-color: #F4AEBA;
+    background-color: #9a4e00;
+    color: #ffa700;
 }
 
 a:hover,
 a:active,
 a:visited {
-    color: #005792;
-    padding-bottom: 100px;
+    color: #9a4e00;
 }
 
 footer {
-    background-color: #005792;
-    color: white;
-    position: sticky;
-    height: 26px;
-    margin: 0px 0px -1px 0px;
+    background-color: #ffa700;
+    position: fixed;
+    font-size: 18px;
+    width: 100%;
+    height: 65px;
+    bottom: -1px;
+    margin-top: 40px;
     padding: 20px 20px;
 }
 
 .jumbotron {
     position: static;
-    padding: 40px 40px 30px;
-    margin: -1px 0px 0px 0px;
-    color: #005792;
-    background-color: #A0DBDB;
+    padding: 40px 60px 0px;
+    margin: -1px 0px 40px 0px;
+    color: #ffa700;
+    background-color: #ffffff;
 }
 
-.credit,
-.how-to {
+.container {
+    margin: 10px 40px;
+}
+
+.modal-header {
+    background-color: #ffa700;
+    color: #ffffff;
+}
+
+.error {
+    display: none;
+    margin-left: 10px;
+}
+
+.error_show{
+    color: #ffa700;
+    font-style: italic;
+	margin-left: 10px;
+}
+
+#name {
+    border-color: #9a4e00;
+    color: #9a4e00;
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
-    line-height: .75em;
+    text-align: left;
+    padding: 5px 5px;
+    vertical-align: 0em;
 }
 
-.form-control,
-.questions {
-    padding: 20px 0px 5px 0px;
+#image {
+    border-color: #9a4e00;
+    color: #9a4e00;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px 5px;
 }
 
-#matchName,
+#matchName {
+    padding: 20px 20px;
+    color: #ffa700;
+}
+
 #matchPhoto {
     padding: 20px 20px;
-    color: #005792;
+    max-width: 300px;
 }
