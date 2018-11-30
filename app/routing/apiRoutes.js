@@ -1,6 +1,7 @@
-// requirements 
+// requirements and dependencies
 var express = require("express");
 var friendArray = require('../data/friends.js');
+
 
 // Create express router
 var router = express.Router();
@@ -17,8 +18,6 @@ router.post('/api/friends', function(req, res) {
     console.log(req.body)
     console.log("This is the userInput: " + userInput);
     var userResponses = userInput.scores;
-    // var userName = userInput.name;
-    // var userPhoto = userInput.photo;
     var totalDifference = 100; 
     var friendName;
     var friendImage;
@@ -44,7 +43,11 @@ router.post('/api/friends', function(req, res) {
     friendArray.push(userInput);
 
     // Send JSON response of the new friend match
-    res.json({status: 'OK', friendName: friendName, friendImage: friendImage});
+    res.json({
+        status: 'OK', 
+        friendName: friendName, 
+        friendImage: friendImage
+    });
 });
 
 // Export API routes to use in other parts of the code

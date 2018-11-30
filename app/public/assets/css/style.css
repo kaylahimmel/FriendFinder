@@ -13,6 +13,12 @@ h1 {
     font-size: 80px;
 }
 
+h5 {
+    font-family: 'Passion One', cursive;
+    letter-spacing: 0.2rem; 
+    font-size: 50px;
+}
+
 hr {
     display: block;
     margin-top: 2em;
@@ -56,9 +62,11 @@ a:visited {
 
 footer {
     background-color: #005792;
+    color: white;
     position: sticky;
     height: 26px;
     margin: 0px 0px -1px 0px;
+    padding: 20px 20px;
 }
 
 .jumbotron {
@@ -78,4 +86,10 @@ footer {
 .form-control,
 .questions {
     padding: 20px 0px 5px 0px;
+}
+
+#matchName,
+#matchPhoto {
+    padding: 20px 20px;
+    color: #005792;
 }
