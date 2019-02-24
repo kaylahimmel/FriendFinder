@@ -233,7 +233,9 @@
                     $("#resultsModal").modal('toggle');
                 });
                 
-                $(".submit").trigger("reset");
+                $(".close").on("click", function() {
+                    $("#quiz").empty();
+                });
 
             });
         </script>
