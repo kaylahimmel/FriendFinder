@@ -118,6 +118,7 @@ a:visited {
     color: #2E282A;
 }
 
+.modal,
 .modal-content {
     text-align: center;
 }
