@@ -207,9 +207,10 @@
         
         <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
         <script type="text/javascript">
-        $(".submit").on("click", function(event) {
+            $(".submit").on("click", function(event) {
                 event.preventDefault();
                 // capture user's inputs from the form
+                var quizForm = $(".quiz");
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#image").val(),
@@ -232,11 +233,7 @@
                     $("#matchName").text(data.friendName);
                     $("#resultsModal").modal('toggle');
                 });
-                
-                $(".close").on("click", function() {
-                    $("#quiz").empty();
-                });
-
+                quizForm.empty();
             });
         </script>
 
