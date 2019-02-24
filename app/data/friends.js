@@ -1,7 +1,7 @@
 var friendArray = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Abed",
+        "photo":"https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif",
         "scores":[
             5,
             1,
@@ -17,7 +17,7 @@ var friendArray = [
     },
     {
         "name":"Jesse",
-        "photo":"https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d7ef5a79190207ccb44c7c2e101e13ed&auto=format&fit=crop&w=1350&q=80",
+        "photo":"https://media.giphy.com/media/l41lMSLVuDQiaJmhi/giphy.gif",
         "scores":[
             2,
             3,
@@ -33,7 +33,7 @@ var friendArray = [
     },
     {
         "name":"April",
-        "photo":"https://images.unsplash.com/photo-1494571180607-f17765ead771?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2db26237c3a9a48b43ec66bc4d3888e6&auto=format&fit=crop&w=1283&q=80",
+        "photo":"https://media.giphy.com/media/mvVZsyhHIjHdC/giphy.gif",
         "scores":[
             5,
             5,
@@ -49,7 +49,7 @@ var friendArray = [
     },
     {
         "name":"Sarah",
-        "photo":"https://images.unsplash.com/photo-1529932260967-af9d3bbd8138?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3e872d900875102bc21577a8f6f1345&auto=format&fit=crop&w=668&q=80",
+        "photo":"https://media.giphy.com/media/QaVl2PZGYsxBC/giphy.gif",
         "scores":[
             3,
             3,
@@ -64,8 +64,8 @@ var friendArray = [
         ]
     },
     {
-        "name":"Sonia",
-        "photo":"https://images.unsplash.com/photo-1526927071144-dbe4c41835e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aa5c3146c2a570c1b15c124e38bdd94f&auto=format&fit=crop&w=1350&q=80",
+        "name":"Trinity",
+        "photo":"https://media.giphy.com/media/3kJXIrkNgV0PXR4gCk/giphy.gif",
         "scores":[
             2,
             1,
@@ -81,7 +81,7 @@ var friendArray = [
     },
     {
         "name":"Eric",
-        "photo":"https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b6ded683923a678ad03fae323169beb4&auto=format&fit=crop&w=700&q=60",
+        "photo":"https://media.giphy.com/media/q1sPGR6ymZU7S/giphy.gif",
         "scores":[
             3,
             4,
@@ -97,7 +97,7 @@ var friendArray = [
     },
     {
         "name":"Jessica",
-        "photo":"https://images.unsplash.com/photo-1526667458881-3455b57a7c50?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae5f66f24b76d34e022054a858397de3&auto=format&fit=crop&w=750&q=80",
+        "photo":"https://media.giphy.com/media/3o6Zt79Pw8b52nVVF6/giphy.gif",
         "scores":[
             1,
             4,
@@ -112,8 +112,8 @@ var friendArray = [
         ]
     },
     {
-        "name":"Doug",
-        "photo":"https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=afb35d2683e102d67bcd70b87b100723&auto=format&fit=crop&w=1350&q=80",
+        "name":"Fred",
+        "photo":"https://media.giphy.com/media/3o7TKNPAmBQGXgEZpu/giphy.gif",
         "scores":[
             2,
             4,
@@ -128,8 +128,8 @@ var friendArray = [
         ]
     },
     {
-        "name":"Dennis",
-        "photo":"https://images.unsplash.com/photo-1495078065017-564723e7e3e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=09093dcdf66dbcd2397b9dc19384a899&auto=format&fit=crop&w=1300&q=80",
+        "name":"Drake",
+        "photo":"https://media.giphy.com/media/DJugcfSIJ5o64/giphy.gif",
         "scores":[
             5,
             5,
@@ -144,8 +144,8 @@ var friendArray = [
         ]
     },
     {
-        "name":"Ashton",
-        "photo":"https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0f994eef47e5fb1a67849703cc961b3&auto=format&fit=crop&w=1350&q=80",
+        "name":"Padma",
+        "photo":"https://media.giphy.com/media/3oFzmrgoX41J1ybllK/giphy.gif",
         "scores":[
             3,
             3,
@@ -160,8 +160,8 @@ var friendArray = [
         ]
     },
     {
-        "name":"Joey",
-        "photo":"https://images.unsplash.com/photo-1526260227844-7635e84a1c7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=23a2660c855bf9935b0947f36016759c&auto=format&fit=crop&w=668&q=80",
+        "name":"Steve",
+        "photo":"https://media.giphy.com/media/5Q8ubaMdCzhW8/giphy.gif",
         "scores":[
             2,
             4,

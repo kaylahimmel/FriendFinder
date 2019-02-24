@@ -2,7 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     text-align: center;
-    color: #ffa700;
+    color: #2E282A;
     background-color: #ffffff;
     line-height: 1.4em;
 }
@@ -11,17 +11,21 @@ h1 {
     font-family: 'Passion One', cursive;
     letter-spacing: 0.2rem; 
     font-size: 85px;
+    color: #7BB247;
 }
 
 h3 {
     font-size: 50px;
-    color: #9a4e00;
+    color: #2E282A;
 }
 
-h5 {
+h4 {
     font-family: 'Lato', sans-serif;
-    font-size: 26px;
-    color: #9a4e00;
+    color: #2E282A;
+}
+
+p {
+    font-size: 18px;
 }
 
 hr {
@@ -33,58 +37,76 @@ hr {
 
 form {
     padding: 10px 40px;
-    margin: 0px 40px;
+    margin: 0px 40px 100px;
+    background-color: #FFEEAA;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2E282A;
 }
 
 label {
     margin: 10px 0px;
     padding: 25px 10px 5px 10px;
     font-family: 'Lato', sans-serif;
-    color: #9a4e00;
+    color: #2E282A;
     font-size: 22px;
     line-height: 1.25em;
 }
 
 option,
-select,{
-    font-family: 'Lato', sans-serif;
+select {
+    border-color: #2E282A;
     background-color: #ffffff;
-    border-color: #9a4e00;
-    color: #9a4e00;
-    font-size: 18px;
-    margin-bottom: 60px;
+    color: #2E282A;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding: 5px 5px;
+    vertical-align: 0em;
+    height: 47px;
 }
 
 button {
-    margin: 40px 0px 150px 0px;
+    margin: 40px 0px 40px;
     padding: 10px 20px;
-    background-color: #9a4e00;
-    color: #ffa700;
+    background-color: #7BB247;
+    color: #2E282A;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2E282A;
 }
 
+a,
 a:hover,
 a:active,
 a:visited {
-    color: #9a4e00;
+    color: #F2C100;
 }
 
 footer {
-    background-color: #ffa700;
+    background-color: #7BB247;
     position: fixed;
     font-size: 18px;
     width: 100%;
     height: 65px;
     bottom: -1px;
-    margin-top: 40px;
+    margin-top: 60px;
     padding: 20px 20px;
+}
+
+.links a,
+a:hover,
+a:active,
+a:visited {
+    color: #2E282A;
 }
 
 .jumbotron {
     position: static;
     padding: 40px 60px 0px;
     margin: -1px 0px 40px 0px;
-    color: #ffa700;
-    background-color: #ffffff;
+    color: #2E282A;
+    background-color: #fff;
 }
 
 .container {
@@ -92,8 +114,12 @@ footer {
 }
 
 .modal-header {
-    background-color: #ffa700;
-    color: #ffffff;
+    background-color: #F2C100;
+    color: #2E282A;
+}
+
+.modal-content {
+    text-align: center;
 }
 
 .error {
@@ -101,34 +127,27 @@ footer {
     margin-left: 10px;
 }
 
-.error_show{
-    color: #ffa700;
+.error_show {
+    color: #2E282A;
     font-style: italic;
 	margin-left: 10px;
 }
 
-#name {
-    border-color: #9a4e00;
-    color: #9a4e00;
+#name,
+#image {
+    border-color: #2E282A;
+    color: #2E282A;
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     padding: 5px 5px;
     vertical-align: 0em;
-}
-
-#image {
-    border-color: #9a4e00;
-    color: #9a4e00;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    text-align: left;
-    padding: 5px 5px;
+    height: 47px;
 }
 
 #matchName {
     padding: 20px 20px;
-    color: #ffa700;
+    color: #2E282A;
 }
 
 #matchPhoto {
