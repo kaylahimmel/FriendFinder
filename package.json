@@ -1,7 +1,7 @@
 {
-  "name": "friendfinder",
+  "name": "FrndFndr",
   "version": "1.0.0",
-  "description": "Welcome to FriendMagnet, a friend-finding app that matches you with a highly-compatible friend based off 10 personality test questions. Get started by clicking the 'Take the Quiz' button. Using a scale from 1 to 5 where 1 = strongly disagree and 5 = strongly agree, answer the 10 survey questions.",
+  "description": "Welcome to FrndFndr, a friend matching app that finds a you highly-compatible friend based off 10 personality test questions. Get started by clicking the 'Take the Quiz' button. Using a scale from 1 to 5 where 1 = strongly disagree and 5 = strongly agree, answer the 10 survey questions.",
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.4",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaylahimmel/FriendFinder.git"
+    "url": "git+https://github.com/kaylahimmel/FrndFndr.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kaylahimmel/FriendFinder/issues"
+    "url": "https://github.com/kaylahimmel/FrndFndr/issues"
   },
-  "homepage": "https://github.com/kaylahimmel/FriendFinder#readme"
+  "homepage": "https://github.com/kaylahimmel/FrndFndr#readme"
 }

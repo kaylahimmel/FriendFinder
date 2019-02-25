@@ -178,7 +178,7 @@
         <div id="resultsModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-header">
-                    <h4 class="modal-title">Your Most-Compatible, New Friend Is...</h4>
+                    <h5 class="modal-title">Based on your answers, your most-compatible new friend is...</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -205,6 +205,11 @@
         
         <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
         <script type="text/javascript">
+            $(document).ready(function() {
+                $("#resultsModal").hide(); 
+                // hide Finished and Play Again buttons at start
+                // resultsDiv.hide();
+            });
             $(".submit").on("click", function(event) {
                 event.preventDefault();
                 // capture user's inputs from the form
@@ -227,12 +232,12 @@
                 };
                // push user's inputs into the database and return the name and image of the "friend" with closest score
                 $.post("/api/friends", userData, function(data) {  
+                    $("#resultsModal").show();
                     $("#matchPhoto").attr("src", data.friendImage);
                     $("#matchName").text(data.friendName);
-                    $("#resultsModal").modal('toggle');
                 });
                 // reset form after data has been pushed to database
-                quizForm.trigger("reset");
+                quizForm.trigger("empty");
             });
         </script>
     </body>

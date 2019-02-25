@@ -112,7 +112,7 @@ a:visited {
 
 .modal,
 .modal-content {
-    margin: 10px 40px;
+    padding: 10px 40px;
     display: inline-block;
     text-align: center;
 }
