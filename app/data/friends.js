@@ -3,15 +3,15 @@ var friendArray = [
         "name":"Abed",
         "photo":"https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif",
         "scores":[
-            5,
             1,
-            4,
-            4,
-            5,
             1,
-            2,
-            5,
-            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
             1
         ]
     },
@@ -20,42 +20,42 @@ var friendArray = [
         "photo":"https://media.giphy.com/media/l41lMSLVuDQiaJmhi/giphy.gif",
         "scores":[
             2,
-            3,
-            5,
-            1,
-            4,
-            1,
             2,
-            3,
-            4,
-            2
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
         ]
     },
     {
         "name":"April",
         "photo":"https://media.giphy.com/media/mvVZsyhHIjHdC/giphy.gif",
         "scores":[
-            5,
-            5,
-            1,
-            4,
             2,
-            3,
-            1,
-            1,
             2,
-            4
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
         ]
     },
     {
         "name":"Sarah",
         "photo":"https://media.giphy.com/media/QaVl2PZGYsxBC/giphy.gif",
         "scores":[
-            3,
-            3,
-            3,
-            3,
-            3,
+            2,
+            2,
+            2,
+            2,
+            2,
             3,
             3,
             3,
@@ -67,16 +67,16 @@ var friendArray = [
         "name":"Trinity",
         "photo":"https://media.giphy.com/media/3kJXIrkNgV0PXR4gCk/giphy.gif",
         "scores":[
-            2,
-            1,
-            2,
-            1,
-            2,
-            1,
-            2,
-            1,
-            2,
-            1
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
         ]
     },
     {
@@ -84,30 +84,30 @@ var friendArray = [
         "photo":"https://media.giphy.com/media/q1sPGR6ymZU7S/giphy.gif",
         "scores":[
             3,
-            4,
-            5,
-            2,
+            3,
+            3,
+            3,
             3,
             4,
-            5,
-            3,
             4,
-            5
+            4,
+            4,
+            4
         ]
     },
     {
         "name":"Jessica",
         "photo":"https://media.giphy.com/media/3o6Zt79Pw8b52nVVF6/giphy.gif",
         "scores":[
-            1,
             4,
             4,
-            1,
-            1,
             4,
             4,
-            1,
-            1,
+            4,
+            4,
+            4,
+            4,
+            4,
             4
         ]
     },
@@ -115,16 +115,16 @@ var friendArray = [
         "name":"Fred",
         "photo":"https://media.giphy.com/media/3o7TKNPAmBQGXgEZpu/giphy.gif",
         "scores":[
-            2,
-            4,
-            2,
-            2,
             4,
             4,
-            2,
-            2,
             4,
-            4
+            4,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5
         ]
     },
     {
@@ -134,45 +134,13 @@ var friendArray = [
             5,
             5,
             5,
-            1,
-            1,
-            1,
             5,
             5,
-            1,
-            1
-        ]
-    },
-    {
-        "name":"Padma",
-        "photo":"https://media.giphy.com/media/3oFzmrgoX41J1ybllK/giphy.gif",
-        "scores":[
-            3,
-            3,
-            2,
-            2,
-            3,
-            3,
-            4,
-            4,
-            3,
-            3
-        ]
-    },
-    {
-        "name":"Steve",
-        "photo":"https://media.giphy.com/media/5Q8ubaMdCzhW8/giphy.gif",
-        "scores":[
-            2,
-            4,
             5,
-            2,
             5,
-            4,
-            2,
             5,
-            4,
-            2
+            5,
+            5
         ]
     }
 ]
