@@ -233,8 +233,53 @@
                     $("#matchName").text(data.friendName);
                     $("#resultsModal").modal('toggle');
                 });
+                // reset form after data has been pushed to database
                 quizForm.trigger("reset");
             });
+
+            var choices = {
+                0: "Choose an option",
+                1: "Strongly disagree",
+                2: "Somewhat disagree",
+                3: "No opinion",
+                4: "Somewhat agree",
+                5: "Strongly agree"
+            };
+
+            var fillOptions = function () {
+                for (var i = 0; i < choices.length; i++) {
+                    // convert the index number to a string instead of number so it can be used as the name attribute
+                    var questionNum = "question" + i.toString()
+                    // fill answer options in on the HTML form
+                    var selectTag = $("<select class='chosen-select' required>");
+                    var optionDefault = $("<option value='default'>");
+                    var optionOne = $("<option value='1'>");
+                    var optionTwo = $("<option value='2'>");
+                    var optionThree = $("<option value='3'>");
+                    var optionFour = $("<option value='4'>");
+                    var optionFive = $("<option value='5'>");
+                    // fill the HTML radio buttons with the answers from the array
+                    // var inputOne = $("<input>").attr("type", "radio").attr("name", questionNum).attr("value", 0).attr("id", "choiceOne");
+                    // var labelOne = $("<label>").text(quiz[i].choices[0] + "  ").attr("for", "choiceOne")
+                    // var inputTwo = $("<input>").attr("type", "radio").attr("name", questionNum).attr("value", 1).attr("id", "choiceTwo");
+                    // var labelTwo = $("<label>").text(quiz[i].choices[1] + "  ").attr("for", "choiceTwo")
+                    // var inputThree = $("<input>").attr("type", "radio").attr("name", questionNum).attr("value", 2).attr("id", "choiceThree");
+                    // var labelThree = $("<label>").text(quiz[i].choices[2]).attr("for", "choiceThree")
+                    // append questions and answer radio buttons to the div tag
+                    selectTag.append(optionDefault);
+                    selectTag.append(optionOne);
+                    selectTag.append(optionTwo);
+                    selectTag.append(optionThree);
+                    selectTag.append(optionFour);
+                    selectTag.append(optionFive);
+                    // questionDiv.append(inputOne);
+                    // questionDiv.append(labelOne);
+                    // append the div tag to the "form" ID in the HTML
+                    quizForm.append(selectTag);
+                }
+            };
+
+
         </script>
 
     </body>
