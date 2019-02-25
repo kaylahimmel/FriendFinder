@@ -9,37 +9,28 @@ body {
 
 h1 {
     font-family: 'Passion One', cursive;
-    letter-spacing: 0.2rem; 
+    letter-spacing: 0.15rem; 
     font-size: 80px;
     color: #69B235;
 }
 
-h3 {
-    font-size: 50px;
-    color: #332828;
-}
-
-h4 {
+h5 {
     font-family: 'Lato', sans-serif;
     color: #332828;
-}
-
-hr {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    border-style: solid;
-    border-width: 2px;
+    margin: 60px 40px 0px;
+    line-height: 1.3em;
 }
 
 form {
     padding: 10px 40px;
-    margin: 0px 40px 100px;
+    width: 100%;
+    margin: 0px 0px 160px;
     background-color: #FFEEAA;
     border-style: solid;
     border-width: 1px;
     border-color: #332828;
-    display: inline-block;
-    text-align: center;
+    /* display: inline-block;
+    text-align: center; */
 }
 
 label {
@@ -47,25 +38,26 @@ label {
     padding: 20px 10px 0px;
     font-family: 'Lato', sans-serif;
     color: #332828;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.25em;
 }
 
 option,
-select {
+select,
+input {
     border-color: #332828;
-    background-color: #ffffff;
+    background-color: #fff;
     color: #332828;
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     vertical-align: 0em;
-    height: 44px;
+    height: 36px;
     padding: 0px 5px;
 }
 
 button {
-    margin: 40px 0px 40px;
+    margin: 30px 0px 40px;
     padding: 10px 20px;
     background-color: #F2C100;
     color: #332828;
@@ -84,12 +76,12 @@ a:visited {
 footer {
     background-color: #69B235;
     position: fixed;
-    font-size: 18px;
+    font-size: 16px;
     width: 100%;
-    height: 65px;
+    height: 50px;
     bottom: -1px;
     margin-top: 60px;
-    padding: 20px 20px;
+    padding: 15px 20px;
 }
 
 .links a,
@@ -101,23 +93,26 @@ a:visited {
 
 .jumbotron {
     position: static;
-    padding: 40px 60px 0px;
+    padding: 40px 50px 40px;
     margin: -1px 0px 40px 0px;
-    color: #332828;
     background-color: #fff;
 }
 
 .credit {
     font-size: 16px;
+    margin: 0px 0px 60px;
 }
 
-.container {
-    margin: 10px 40px;
+.container,
+.quiz {
+    /* margin: 10px 0px; */
     display: inline-block;
     text-align: center;
 }
 
-.quiz {
+.modal,
+.modal-content {
+    margin: 10px 40px;
     display: inline-block;
     text-align: center;
 }
@@ -127,14 +122,8 @@ a:visited {
     color: #332828;
 }
 
-.modal,
-.modal-content, {
-    text-align: center;
-}
-
 .error {
     display: none;
-    margin-left: 10px;
 }
 
 .error_show {
@@ -148,11 +137,11 @@ a:visited {
     border-color: #332828;
     color: #332828;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
-    padding: 5px 5px;
+    padding: 3px 3px;
     vertical-align: 0em;
-    height: 47px;
+    height: 36px;
 }
 
 #matchName {
