@@ -8,7 +8,7 @@
         <title>Frnd Fndr | Survey</title>
         
         <!--Boostrap CSS-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!--Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Passion+One:700|Lato:400" rel="stylesheet">
         <!--My own CSS-->
@@ -18,29 +18,30 @@
     <body>
         <header>
             <div class="jumbotron">
-                <h1 class="display-4">Frnd Fndr: Friend Matching App</h1>
-                <a href="https://www.16personalities.com/free-personality-test">
-                    <p class="credit">(Based off 16Personalities' NERIS Type Explorer)</p>
+                <h1 class="title">Frnd Fndr: Friend Matching App</h1>
+                <h6 href="https://www.16personalities.com/free-personality-test">
+                    <p class="credit">(Based off 16Personalities' NERIS Type Explorer)</h6>
                 </a>
-                <h5 class="how-to"><strong>How this works:</strong> Type your name and upload a photo. Then answer 10 questions and 
-                    click the 'Find My New Friend' button to reveal your match.</h5>
+                <h5 class="how-to">How this works: To be matched with your new, highly-compatible friend, fill out the form below completely. Your match   
+                    will be revealed once you click the 'Find My New Friend' button.
+                </h5>
             </div>
         </header>
 
-        <div class="container d-sm-flex">
+        <!-- <div class="container"> -->
             <form class="quiz">
-                <div class="form-group">
-                    <label for="name">Name: </label>
-                    <input type="text" id="name"  class="form-control" required>
+                <div class="form-group d-unstyled">
+                    <label class="form-name" for="name">First Name:</label>
+                    <input type="text" id="name" class="form-control" required>
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label for="image">Upload a .png or .jpg of yourself: </label>
+                    <label class="form-image" for="image">Upload a .png or .jpg of yourself: </label>
                     <input type="file" id="image" accept="image/png, image/jpeg" class="form-control" required>
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q1">I frequently misplace my things.</label>
+                    <label class="form-questions" for="q1">1) I frequently misplace my things.</label>
                     <br>
                     <select class="chosen-select" id="q1" required>
                         <option value="default">Choose an option</option>
@@ -53,7 +54,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q2">I enjoy going to social events that involve dress-up or role-play activities.</label>
+                    <label class="form-questions" for="q2">2) I enjoy going to social events that involve dress-up or role-play activities.</label>
                     <br>
                     <select class="chosen-select" id="q2" required>
                         <option value="default">Choose an option</option>
@@ -63,10 +64,10 @@
                         <option value="4">4 - Somewhat agree</option>
                         <option value="5">5 - Strongly agree</option>
                     </select>
-                    <span class="error">This field is required</span>
+                    <span class="error">3) This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q3">I often get so lost in my thoughts that I ignore or forget my surroundings.</label>
+                    <label class="form-questions" for="q3">3) I often get so lost in my thoughts that I ignore or forget my surroundings.</label>
                     <br>
                     <select class="chosen-select" id="q3" required>
                         <option value="default">Choose an option</option>
@@ -79,7 +80,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q4">An interesting book or a video game is often better than a social event.</label>
+                    <label class="form-questions" for="q4">4) An interesting book or a video game is often better than a social event.</label>
                     <br>
                     <select class="chosen-select" id="q4" required>
                         <option value="default">Choose an option</option>
@@ -92,7 +93,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q5">If the room is full, you stay closer to the walls, avoiding the center.</label>
+                    <label class="form-questions" for="q5">5) If the room is full, you stay closer to the walls, avoiding the center.</label>
                     <br>
                     <select class="chosen-select" id="q5" required>
                         <option value="default">Choose an option</option>
@@ -105,7 +106,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q6">I rarely do something just out of sheer curiosity.</label>
+                    <label class="form-questions" for="q6">6) I rarely do something just out of sheer curiosity.</label>
                     <br>
                     <select class="chosen-select" id="q6" required>
                         <option value="default">Choose an option</option>
@@ -118,7 +119,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q7">I think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                    <label class="form-questions" for="q7">7) I think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                     <br>
                     <select class="chosen-select" id="q7" required>
                         <option value="default">Choose an option</option>
@@ -131,7 +132,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q8">I do not mind being at the center of attention.</label>
+                    <label class="form-questions" for="q8">8) I do not mind being at the center of attention.</label>
                     <br>
                     <select class="chosen-select" id="q8" required>
                         <option value="default">Choose an option</option>
@@ -144,7 +145,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q9">I feel more energetic after spending time with a group of people.</label>
+                    <label class="form-questions" for="q9">9) I feel more energetic after spending time with a group of people.</label>
                     <br>
                     <select class="chosen-select" id="q9" required>
                         <option value="default">Choose an option</option>
@@ -157,7 +158,7 @@
                     <span class="error">This field is required</span>
                 </div>
                 <div class="form-group">
-                    <label class="questions" for="q10">My travel plans are usually well thought out.</label>
+                    <label class="form-questions" for="q10">10) My travel plans are usually well thought out.</label>
                     <br>
                     <select class="chosen-select" id="q10" required>
                         <option value="default">Choose an option</option>
@@ -172,7 +173,7 @@
 
             <button type="button" class="submit rounded">Find My New Friend</button>
             </form>  
-        </div>
+        <!-- </div> -->
 
         <!-- Modal pop-up with name and image of new "friend" -->
         <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -203,7 +204,7 @@
         <!--jQuery & Bootstrap-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
         <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
         <script type="text/javascript">
