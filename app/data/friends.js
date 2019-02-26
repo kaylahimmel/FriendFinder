@@ -33,7 +33,7 @@ var friendArray = [
     },
     {
         "name":"April",
-        "photo":"https://media.giphy.com/media/mvVZsyhHIjHdC/giphy.gif",
+        "photo":"https://media.giphy.com/media/cstUVKdskPABi/giphy.gif",
         "scores":[
             2,
             2,
