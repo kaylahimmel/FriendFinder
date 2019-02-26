@@ -8,7 +8,7 @@
         <title>Frnd Fndr | Survey</title>
         
         <!--Boostrap CSS-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!--Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Passion+One:700|Lato:400" rel="stylesheet">
         <!--My own CSS-->
@@ -22,7 +22,7 @@
                 <a href="https://www.16personalities.com/free-personality-test">
                     <p class="credit">(Based off 16Personalities' NERIS Type Explorer)</p>
                 </a>
-                <h5 class="how-to"><strong>How this works: </strong>Type your name and upload a photo. Then, answer 10 questions and 
+                <h5 class="how-to"><strong>How this works:</strong> Type your name and upload a photo. Then answer 10 questions and 
                     click the 'Find My New Friend' button to reveal your match.</h5>
             </div>
         </header>
@@ -30,7 +30,7 @@
         <div class="container d-sm-flex">
             <form class="quiz">
                 <div class="form-group">
-                    <label for="name">Your first name: </label>
+                    <label for="name">Name: </label>
                     <input type="text" id="name"  class="form-control" required>
                     <span class="error">This field is required</span>
                 </div>
@@ -203,62 +203,17 @@
         <!--jQuery & Bootstrap-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
-    <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#resultsModal").hide();
-        });
-
-        $(".submit").on("click", function(event) {
-            event.preventDefault();
-            // capture user's inputs from the form
-            var userData = {
-                name: $("#name").val(),
-                photo: $("#image").val(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
-           // push user's inputs into the database and return the name and image of the "friend" with closest score
-            $.post("/api/friends", userData, function(data) {  
-                $("#matchPhoto").attr("src", data.friendImage);
-                $("#matchName").text(data.friendName);
-                $("#resultsModal").modal('show');
-                $("#resultsModal").show();
-            });
-            
-            $(".close").on("click", function() {
-                $("#quiz").empty();
-                location.href = "/home";
-            });
-        });
-    </script>
-</body>
-</html>
-
-
         <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
-        <!-- <script type="text/javascript">
+        <script type="text/javascript">
             $(document).ready(function() {
-                $("#resultsModal").hide(); 
-                // hide Finished and Play Again buttons at start
-                // resultsDiv.hide();
+                $("#resultsModal").hide();
             });
+
             $(".submit").on("click", function(event) {
                 event.preventDefault();
                 // capture user's inputs from the form
-                var quizForm = $(".quiz");
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#image").val(),
@@ -275,15 +230,18 @@
                         $("#q10").val()
                     ]
                 };
-               // push user's inputs into the database and return the name and image of the "friend" with closest score
+                // push user's inputs into the database and return the name and image of the "friend" with closest score
                 $.post("/api/friends", userData, function(data) {  
-                    $("#resultsModal").show();
                     $("#matchPhoto").attr("src", data.friendImage);
                     $("#matchName").text(data.friendName);
+                    $("#resultsModal").modal('show');
+                    $("#resultsModal").show();
                 });
-                // reset form after data has been pushed to database
-                quizForm.trigger("empty");
+                
+                $(".close").on("click", function() {
+                    $("#quiz").empty();
+                });
             });
         </script>
     </body>
-</html> -->
+</html>
