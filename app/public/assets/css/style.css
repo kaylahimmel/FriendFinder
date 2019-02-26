@@ -161,4 +161,6 @@ a:visited {
     padding: 20px 20px;
     color: #332828;
     max-width: 300px;
+    text-align: center;
+    font-size: 80px;
 }
