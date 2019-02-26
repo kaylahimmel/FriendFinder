@@ -129,9 +129,8 @@ a:visited {
 .modal-header {
     background-color: #F2C100;
     color: #332828;
-    /* vertical-align: 0em; */
     text-align: center;
-    height: 75px;
+    /* height: 75px; */
 }
 
 .error {
