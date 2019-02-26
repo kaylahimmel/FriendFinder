@@ -207,7 +207,6 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $("#resultsModal").hide();
-            $(".container").show();
         });
 
         $(".submit").on("click", function(event) {
@@ -233,11 +232,13 @@
             $.post("/api/friends", userData, function(data) {  
                 $("#matchPhoto").attr("src", data.friendImage);
                 $("#matchName").text(data.friendName);
+                $("#resultsModal").modal('show');
                 $("#resultsModal").show();
             });
             
             $(".close").on("click", function() {
                 $("#quiz").empty();
+                location.href = "/home";
             });
         });
     </script>
