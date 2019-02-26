@@ -1,17 +1,19 @@
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     color: #332828;
     background-color: #fff;
-    line-height: 1.3em;
+    line-height: 1.4em;
+    width: auto;
 }
 
 h1 {
     font-family: 'Passion One', cursive;
-    /* letter-spacing: 0.15rem;  */
-    /* font-size: 80px; */
+    letter-spacing: 0.1rem; 
     color: #69B235;
+    width: 100%;
+    margin: auto;
 }
 
 h3 {
