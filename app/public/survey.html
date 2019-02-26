@@ -203,8 +203,50 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
+    <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#resultsModal").hide();
+            $(".container").show();
+        });
+
+        $(".submit").on("click", function(event) {
+            event.preventDefault();
+            // capture user's inputs from the form
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#image").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+           // push user's inputs into the database and return the name and image of the "friend" with closest score
+            $.post("/api/friends", userData, function(data) {  
+                $("#matchPhoto").attr("src", data.friendImage);
+                $("#matchName").text(data.friendName);
+                $("#resultsModal").show();
+            });
+            
+            $(".close").on("click", function() {
+                $("#quiz").empty();
+            });
+        });
+    </script>
+</body>
+</html>
+
+
         <!--JS to check user's input against "friends" in the database, then return "friend" with closest score-->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             $(document).ready(function() {
                 $("#resultsModal").hide(); 
                 // hide Finished and Play Again buttons at start
@@ -241,4 +283,4 @@
             });
         </script>
     </body>
-</html>
+</html> -->
