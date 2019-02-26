@@ -3,8 +3,8 @@ body {
     font-size: 20px;
     text-align: center;
     color: #332828;
-    background-color: #ffffff;
-    line-height: 1.4em;
+    background-color: #fff;
+    line-height: 1.3em;
 }
 
 h1 {
@@ -14,8 +14,20 @@ h1 {
     color: #69B235;
 }
 
+h3 {
+    font-family: 'Passion One', cursive;
+    letter-spacing: 0.15rem; 
+    font-size: 40px;
+    line-height: 1.3em;
+    color: #69B235;
+}
+
 h5 {
-    font-family: 'Lato', sans-serif;
+    margin: 60px 40px 0px;
+    line-height: 1.3em;
+}
+
+h6 {
     color: #332828;
     margin: 60px 40px 0px;
     line-height: 1.3em;
@@ -29,8 +41,6 @@ form {
     border-style: solid;
     border-width: 1px;
     border-color: #332828;
-    /* display: inline-block;
-    text-align: center; */
 }
 
 label {
@@ -105,22 +115,20 @@ a:visited {
 
 .container,
 .quiz {
-    /* margin: 10px 0px; */
     display: inline-block;
     text-align: center;
 }
 
 .modal,
 .modal-content {
-    /* padding: 10px 40px; */
     display: inline-block;
     text-align: center;
+    width: 100%;
 }
 
 .modal-header {
     background-color: #F2C100;
     color: #332828;
-    width: 100%;
     vertical-align: 0em;
     text-align: center;
     height: 75px;
